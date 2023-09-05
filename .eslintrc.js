@@ -5,7 +5,8 @@ module.exports = {
     },
   extends: [
     'standard-with-typescript',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'plugin:i18next/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,6 +20,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'i18next'
   ],
   rules: {
     'react/jsx-indent': ['error', 4],
@@ -39,7 +41,8 @@ module.exports = {
     'no-underscore-dangle': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     "@typescript-eslint/strict-boolean-expressions": "warn",
-    "@typescript-eslint/prefer-nullish-coalescing": "warn"
+    "@typescript-eslint/prefer-nullish-coalescing": "warn",
+    'i18next/no-literal-string': ['error', {markupOnly: true}]
     },
   globals: {
     __IS_DEV__: true
